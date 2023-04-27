@@ -1,9 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Logo = require('./lib/logo');
 const Circle = require('./lib/circle');
 const Triangle = require('./lib/triangle');
 const Square = require('./lib/square');
+
+const circle = new Circle();
+const triangle = new Triangle();
+const square = new Square();
 
 const questions = [
     {
@@ -29,30 +32,16 @@ const questions = [
     },    
 ]
 
-
-// .then((data) => {
-//     const circleShape = Circle.render(data);
-//     const triangleShape = Triangle.render(data);
-//     const squareShape = Square.render(data);
-// })
-
-function pickShape(data) {
-    
-}
-
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
         console.log("Generated logo.svg");
-        const circleShape = Circle.render();
-        const triangleShape = Triangle.render();
-        const squareShape = Square.render();
         if (data.shape === 'Circle') {
-            fs.writeFile('./examples/logo.svg', circleShape);
+            fs.writeFile('./examples/logo.svg', circle.render(data));
         }else if (data.shape === 'Triangle') {
-            fs.writeFile('./examples/logo.svg', triangleShape);      
+            fs.writeFile('./examples/logo.svg', triangle.render(data));      
         }else {
-            fs.writeFile('./examples/logo.svg', squareShape);
+            fs.writeFile('./examples/logo.svg', square.render(data));
         }    
     }
 )}

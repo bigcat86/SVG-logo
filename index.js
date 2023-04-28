@@ -4,10 +4,6 @@ const Circle = require('./lib/circle');
 const Triangle = require('./lib/triangle');
 const Square = require('./lib/square');
 
-const circle = new Circle();
-const triangle = new Triangle();
-const square = new Square();
-
 const questions = [
     {
         type: 'input',
@@ -37,11 +33,20 @@ function init() {
     .then((data) => {
         console.log("Generated logo.svg");
         if (data.shape === 'Circle') {
-            fs.writeFile('./examples/logo.svg', circle.render(data));
+            const circle = new Circle(data.text, data.textColor, data.shape, data.shapeColor);
+            fs.writeFile('./examples/logo_circle.svg', circle.render(), (err) => {
+                console.log(err)
+            });
         }else if (data.shape === 'Triangle') {
-            fs.writeFile('./examples/logo.svg', triangle.render(data));      
+            const triangle = new Triangle(data.text, data.textColor, data.shape, data.shapeColor);
+            fs.writeFile('./examples/logo_triangle.svg', triangle.render(), (err) => {
+                console.log(err)
+            });    
         }else {
-            fs.writeFile('./examples/logo.svg', square.render(data));
+            const square = new Square(data.text, data.textColor, data.shape, data.shapeColor);
+            fs.writeFile('./examples/logo_square.svg', square.render(), (err) => {
+                console.log(err)
+            });
         }    
     }
 )}

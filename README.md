@@ -19,7 +19,7 @@ SVG Logo Maker - Challenge #10
 - What an svg file looks like, how to use svg syntax, and how to view it.
 - What .gitignore files can do to clean up a repository.
 
-## Please view a demonstration of the SVG Logo Maker here:
+## Please view a demonstration of the SVG Logo Maker here: https://drive.google.com/file/d/1RPEiz_H_JBt7Xk-1yKVVR3wwIM78rpiS/view
 
 ## These are some screenshots of the final product (.svg files):
 

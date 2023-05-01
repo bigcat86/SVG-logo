@@ -24,8 +24,10 @@ SVG Logo Maker - Challenge #10
 ## These are some screenshots of the final product (.svg files):
 
 SVG viewer/editor and created logo:
+
 ![Screenshot 2023-05-01 at 9 59 41 AM](https://user-images.githubusercontent.com/122062578/235496265-d9a84fee-ae48-4e23-82d5-2e38a67dafa6.png)
 
 Examples of other shapes:
+
 ![Screenshot 2023-05-01 at 10 02 53 AM](https://user-images.githubusercontent.com/122062578/235496375-e5c5d4c8-d825-4d2c-905a-27b80d5e7ea6.png)
 ![Screenshot 2023-05-01 at 10 01 58 AM](https://user-images.githubusercontent.com/122062578/235496415-efd6c7d7-b377-42b0-b135-16d1260a115b.png)
